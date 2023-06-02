@@ -1,0 +1,113 @@
+.header {
+    padding-top: 22px;
+    padding-bottom: 22px;
+
+    &__page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.navigation {
+    display: flex;
+    gap: 93px;
+
+    // &__logo {
+    //     font-family: 'raleway', sans-serif;
+    //     font-weight: 700;
+    //     font-size: 26px;
+    //     line-height: 1.2;
+    //     text-decoration: none;
+    // }
+
+    &__menu {
+        display: flex;
+        gap: 26px;
+        margin: 0;
+    }
+
+    // &__webstyle {
+    //     color: $webBlueColor;
+    //     line-height: 1.2;
+    // }
+
+    &__font {
+        display: block;
+        padding: 10px;
+        color: $globalFontColor;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        line-height: 1.2;
+        transition-property: color;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus,
+        &:hover {
+            color: $webBlueColor;
+        }
+    }
+}
+
+.navigation__font--current {
+    position: relative;
+    color: $webBlueColor;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: $webBlueColor;
+        border-radius: 2px;
+        width: 76%;
+        height: 4px;
+        margin-top: 28px;
+        display: block;
+        pointer-events: none;
+    }
+}
+
+.navigation__logo--black {
+    color: $darkFontColor;
+}
+
+.adress {
+    display: flex;
+    gap: 50px;
+    margin: 0px;
+
+    &__link {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: $greyFontColor;
+        text-decoration: none;
+        font-style: normal;
+        fill: $iconColor;
+        display: flex;
+        gap: 10px;
+        transition-property: color, fill;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus,
+        &:hover {
+            color: $webBlueColor;
+            fill: $webBlueColor;
+        }
+    }
+
+    &__icon {
+        margin: 0px;
+        padding-top: 0px;
+    }
+}
+
+.header-line {
+    border-bottom: 1px solid $headerLineColor;
+}
+
+.logo-black {
+    color: $darkFontColor;
+}

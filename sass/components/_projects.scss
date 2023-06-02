@@ -1,0 +1,103 @@
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding-bottom: 34px;
+    margin: 0 auto;
+
+    &__styles {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 6px 23px;
+        border-radius: 4px;
+        border: none;
+        transition-property: background-color, color, box-shadow;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            background-color: $webBlueColor;
+            color: $brightFontColor;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__figure {
+        margin: 0 auto;
+        width: 370px;
+        transition-property: box-shadow;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+                0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+        }
+
+        &:hover .project__paragraph,
+        &:focus .project__paragraph {
+            transform: translateY(0);
+        }
+    }
+
+    &__paragraph {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(33, 150, 243, 0.9);
+        padding: 49px 45px 49px 24px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #ffffff;
+        transform: translateY(100%);
+        transition-property: transform;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__overflow {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__figcaption {
+        border-left: 1px solid $card-line-color;
+        border-right: 1px solid $card-line-color;
+        border-bottom: 1px solid $card-line-color;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-bottom: 4px;
+    }
+
+    &__description {
+        color: $greyFontColor;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.9;
+        margin: 0 auto;
+        display: block;
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,27 @@
+.lorem {
+    display: flex;
+    gap: 30px;
+    margin: 0 auto;
+
+    &__icon {
+        margin: 0 auto;
+        padding: 25px 100px;
+        background-color: $ourTeamBackgroundColor;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.1;
+    }
+
+    &__paragraph {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $greyFontColor;
+    }
+}

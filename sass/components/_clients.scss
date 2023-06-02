@@ -1,0 +1,56 @@
+.clients {
+    margin: 0 auto;
+    padding: 94px 0px 98px;
+
+    &--yaco,
+    &--sheets,
+    &--company,
+    &--fosterpeters,
+    &--brand,
+    &--box {
+        fill: $iconColor;
+        width: 170px;
+        height: 92px;
+        border: 1px solid $iconColor;
+        border-radius: 4px;
+        margin: 0 15px;
+        cursor: pointer;
+        transition-property: border-color, fill;
+        transition-duration: 0.25s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &--yaco {
+        padding: 24.71px 65px 20.58px 64px;
+    }
+    &--sheets {
+        padding: 20.71px 65px 19.29px;
+    }
+    &--company {
+        padding: 24.71px 64.86px 26.12px 61.68px;
+    }
+    &--fosterpeters {
+        padding: 22.7px 49.56px 28.68px 61.68px;
+    }
+    &--brand {
+        padding: 22.77px 53.46px 23.8px 54px;
+    }
+    &--box {
+        padding: 22.77px 38.21px 25.31px 38px;
+    }
+    &--yaco:hover,
+    &--sheets:hover,
+    &--company:hover,
+    &--fosterpeters:hover,
+    &--brand:hover,
+    &--box:hover,
+    &--yaco:focus,
+    &--sheets:focus,
+    &--company:focus,
+    &--fosterpeters:focus,
+    &--brand:focus,
+    &--box:focus {
+        fill: $webBlueColor;
+        border-color: $webBlueColor;
+    }
+}
