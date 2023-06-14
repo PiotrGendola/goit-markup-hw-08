@@ -1,4 +1,5 @@
 @use './utils/vars.scss' as *;
+@import './utils/mixins';
 @import './components/general.scss';
 @import './components/projects';
 @import './components/clients';
@@ -9,3 +10,4 @@
 @import './components/team';
 @import './components/activity';
 @import './utils/vars.scss';
+@import './components/mobile-menu';

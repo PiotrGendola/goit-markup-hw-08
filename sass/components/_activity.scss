@@ -2,6 +2,10 @@
     margin: 0 auto;
     padding: 0px 0px 94px;
 
+    @include desktop {
+        display: block;
+    }
+
     &__photos {
         display: flex;
         flex-wrap: nowrap;

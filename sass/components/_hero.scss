@@ -1,28 +1,99 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-color: $webGreyColor;
     margin: 0 auto;
     width: 100%;
-    background-repeat: no-repeat;
+    max-width: 100%;
     background-image: linear-gradient(
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
         ),
-        url('../images/wallpaper.jpg');
+        url('../images/wallpaper/wall480.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url('../images/wallpaper/wall480@2x.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    @include tablet {
+        max-width: 768px;
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url('../images/wallpaper/wall768.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url('../images/wallpaper/wall768@2x.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    @include desktop {
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        max-width: 1600px;
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url('../images/wallpaper/wall1600.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url('../images/wallpaper/wall1600@2x.jpg');
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: center;
+        }
+    }
 
     &__heading {
         color: $brightFontColor;
-        max-width: 600px;
-        height: 120px;
-        left: 452px;
-        top: 200px;
-        font-size: 44px;
+        max-width: 365px;
+        font-size: 26px;
         font-weight: 900;
-        line-height: 1.4;
+        line-height: 1.6;
         text-align: center;
         margin: 0 auto;
+
+        @include desktop {
+            font-size: 44px;
+            max-width: 696px;
+            line-height: 1.4;
+        }
     }
 
     &__button {
@@ -41,11 +112,14 @@
     }
 
     &__close {
-        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 8px;
+        right: 8px;
         width: 30px;
         height: 30px;
-        left: 490px;
-        top: 8px;
         background-color: #ffffff;
         border-color: rgba(0, 0, 0, 0.1);
         border-radius: 15px;
@@ -72,18 +146,25 @@
     &__header {
         font-size: 20px;
         font-weight: 700;
-        line-height: 23px;
+        line-height: 30px;
         letter-spacing: 0.03em;
         text-align: center;
-        margin-top: 2px;
-        margin-bottom: 12px;
+        margin: 0 auto;
         padding: 0;
+        max-width: 370px;
+        width: 100%;
+
+        @include desktop {
+            line-height: 23px;
+            margin-top: 2px;
+            margin-bottom: 12px;
+            max-width: 448px;
+        }
     }
 
     &__label {
         display: block;
         text-align: left;
-        padding-left: 40px;
         padding-bottom: 4px;
         font-size: 12px;
         font-weight: 400;
@@ -103,7 +184,8 @@
     &__box {
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
-        width: 448px;
+        max-width: 370px;
+        width: 100%;
         height: 40px;
         display: inline-flex;
         text-align: left;
@@ -111,6 +193,10 @@
         transition-property: border-color, fill;
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include desktop {
+            max-width: 448px;
+        }
 
         &:focus-within,
         &:hover,
@@ -124,7 +210,8 @@
         outline: none;
         border: 1px solid rgba(33, 33, 33, 0.2);
         border-radius: 4px;
-        width: 448px;
+        max-width: 370px;
+        width: 100%;
         height: 120px;
         margin-bottom: 20px;
         resize: none;
@@ -132,6 +219,10 @@
         transition-property: border-color;
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include desktop {
+            max-width: 448px;
+        }
 
         &:hover,
         &:focus {
@@ -142,6 +233,22 @@
 
     &__icon {
         margin: 11px 12px;
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $brightFontColor;
+        width: 200px;
+        height: 50px;
+        border: none;
+        background-color: $webBlueColor;
+        border-radius: 4px;
+        margin-top: 30px;
+        box-shadow: 0px 4px 4px 0px #00000026;
     }
 }
 
@@ -165,13 +272,18 @@
     display: block;
     position: relative;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 14px;
     font-weight: 400;
-    line-height: 24px;
     letter-spacing: 0.03em;
     color: $greyFontColor;
     text-align: center;
     padding-left: 7px;
+
+    @include desktop {
+        font-size: 14px;
+        line-height: 24px;
+    }
 
     &:hover input ~ .checkmark,
     &:focus input ~ .checkmark {
@@ -198,8 +310,8 @@
 
 .checkmark {
     position: absolute;
-    top: 4px;
-    left: 54px;
+    top: 0px;
+    left: 0px;
     height: 15px;
     width: 16px;
     border: 2px solid $globalFontColor;
@@ -212,27 +324,16 @@
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    @include desktop {
+        top: 4px;
+        left: 15px;
+    }
+
     &:after {
         content: '';
         position: absolute;
         display: none;
     }
-}
-
-.form__button {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: $brightFontColor;
-    width: 200px;
-    height: 50px;
-    border: none;
-    background-color: $webBlueColor;
-    border-radius: 4px;
-    margin-top: 30px;
-    box-shadow: 0px 4px 4px 0px #00000026;
 }
 
 .is-hidden {
@@ -243,8 +344,10 @@
 
 .modal {
     position: absolute;
-    width: 528px;
-    height: 581px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    height: 609px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -253,4 +356,9 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     z-index: 2;
+
+    @include desktop {
+        max-width: 528px;
+        height: 581px;
+    }
 }

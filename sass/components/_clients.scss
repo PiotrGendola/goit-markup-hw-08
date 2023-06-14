@@ -1,6 +1,24 @@
 .clients {
     margin: 0 auto;
-    padding: 94px 0px 98px;
+    padding: 0px 0px 98px;
+
+    &__container {
+        margin: 0 auto;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1200px;
+        width: 100%;
+        @include tablet {
+            width: 768px;
+        }
+
+        @include desktop {
+            width: 1200px;
+        }
+    }
 
     &--yaco,
     &--sheets,
@@ -9,15 +27,24 @@
     &--brand,
     &--box {
         fill: $iconColor;
-        width: 170px;
+        width: 210px;
         height: 92px;
         border: 1px solid $iconColor;
         border-radius: 4px;
-        margin: 0 15px;
+        margin: 0 auto;
         cursor: pointer;
+        text-align: center;
         transition-property: border-color, fill;
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include tablet {
+            width: 228px;
+        }
+
+        @include desktop {
+            width: 170px;
+        }
     }
 
     &--yaco {

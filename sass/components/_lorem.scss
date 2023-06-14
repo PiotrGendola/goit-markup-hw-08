@@ -1,15 +1,44 @@
 .lorem {
-    display: flex;
-    gap: 30px;
     margin: 0 auto;
+    padding: 94px 0px;
+
+    &__box {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        margin: 0 auto;
+        // width: 450px;
+
+        @include tablet {
+            // width: 354px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @include desktop {
+            // width: 270px;
+        }
+    }
 
     &__icon {
         margin: 0 auto;
-        padding: 25px 100px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         background-color: $ourTeamBackgroundColor;
         border-radius: 4px;
         display: flex;
         justify-content: center;
+        max-width: 450px;
+        height: 120px;
+
+        @include tablet {
+            max-width: 354px;
+            // height: 120px;
+        }
+
+        @include desktop {
+            max-width: 270px;
+        }
     }
 
     &__label {
@@ -23,5 +52,14 @@
         font-size: 14px;
         line-height: 1.7;
         color: $greyFontColor;
+        max-width: 450px;
+
+        @include tablet {
+            max-width: 354px;
+        }
+
+        @include desktop {
+            max-width: 270px;
+        }
     }
 }

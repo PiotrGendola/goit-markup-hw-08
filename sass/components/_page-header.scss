@@ -1,6 +1,16 @@
 .header {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+
+    @include tablet {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    @include desktop {
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
 
     &__page {
         display: flex;
@@ -11,26 +21,23 @@
 
 .navigation {
     display: flex;
-    gap: 93px;
 
-    // &__logo {
-    //     font-family: 'raleway', sans-serif;
-    //     font-weight: 700;
-    //     font-size: 26px;
-    //     line-height: 1.2;
-    //     text-decoration: none;
-    // }
+    @include tablet {
+        gap: 83px;
+    }
+
+    @include desktop {
+        gap: 93px;
+    }
 
     &__menu {
         display: flex;
         gap: 26px;
         margin: 0;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
-
-    // &__webstyle {
-    //     color: $webBlueColor;
-    //     line-height: 1.2;
-    // }
 
     &__font {
         display: block;
@@ -47,6 +54,21 @@
         &:focus,
         &:hover {
             color: $webBlueColor;
+        }
+    }
+
+    &__hamburger {
+        background-color: transparent;
+        border: none;
+        fill: $globalFontColor;
+
+        @include tablet {
+            display: none;
+        }
+
+        &:focus,
+        &:hover {
+            fill: $webBlueColor;
         }
     }
 }
@@ -73,12 +95,26 @@
 }
 
 .adress {
-    display: flex;
-    gap: 50px;
-    margin: 0px;
+    display: none;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: auto;
+        font-size: 12px;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin: 0px;
+        font-size: 14px;
+    }
 
     &__link {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.1;
         color: $greyFontColor;
@@ -90,6 +126,13 @@
         transition-property: color, fill;
         transition-duration: 0.25s;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @include tablet {
+            font-size: 12px;
+        }
+        @include desktop {
+            font-size: 14px;
+        }
 
         &:focus,
         &:hover {

@@ -4,10 +4,18 @@ body {
 }
 
 .container {
+    max-width: 480px;
     width: 100%;
-    max-width: 1200px;
-    padding: 0 15px;
     margin: 0 auto;
+    padding: 0 15px;
+
+    @include tablet {
+        max-width: 768px;
+    }
+
+    @include desktop {
+        max-width: 1200px;
+    }
 }
 
 .flex {
@@ -56,4 +64,10 @@ ul {
     transition-property: box-shadow;
     transition-duration: 0.25s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
