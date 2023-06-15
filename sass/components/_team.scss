@@ -1,7 +1,7 @@
 .team {
-    background-color: var($ourTeamBackgroundColor);
+    background-color: $ourTeamBackgroundColor;
     margin: 0 auto;
-    padding: 0px 0px 94px 0px;
+    padding: 94px 0px;
 
     &__card {
         display: flex;
@@ -20,20 +20,16 @@
 
     &__figure {
         margin: 0 auto;
-        max-width: 100%;
-        width: 450px;
-        height: 622px;
+        width: 100%;
         box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
             0 1px 3px rgba(0, 0, 0, 0.12);
 
         @include tablet {
             width: 354px;
-            height: 536px;
         }
 
         @include desktop {
             width: 270px;
-            height: 428px;
         }
     }
 

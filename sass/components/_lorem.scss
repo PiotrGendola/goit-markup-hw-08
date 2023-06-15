@@ -7,16 +7,10 @@
         gap: 30px;
         flex-direction: column;
         margin: 0 auto;
-        // width: 450px;
 
         @include tablet {
-            // width: 354px;
             flex-direction: row;
             flex-wrap: wrap;
-        }
-
-        @include desktop {
-            // width: 270px;
         }
     }
 
