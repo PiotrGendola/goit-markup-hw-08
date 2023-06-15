@@ -109,7 +109,6 @@
         font-size: 16px;
         color: $brightFontColor;
         line-height: 1.25;
-        // max-width: 450px;
         width: 100%;
         height: 50px;
         position: relative;
@@ -155,8 +154,6 @@
         @include desktop {
             display: inline-flex;
             flex-direction: row;
-            // margin-left: 12px;
-            // margin-top: 20px;
         }
     }
 
@@ -169,7 +166,6 @@
     &__links {
         display: flex;
         flex-direction: column;
-        // align-items: center;
         width: 100%;
 
         @include tablet {
@@ -188,7 +184,6 @@
         gap: 20px;
 
         @include desktop {
-            // display: inline;
             flex-direction: row;
             align-items: center;
         }
